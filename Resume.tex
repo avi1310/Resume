@@ -1,118 +1,205 @@
-\documentclass[margin,line]{res}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{color}
-\oddsidemargin -.5in
-\evensidemargin -.5in
-\textwidth=6.0in
-\itemsep=0in
-\parsep=0in
-\topmargin=-0.4in
-\topskip=0in
-\textheight=10in
- 
-\newenvironment{list1}{
-  \begin{list}{\ding{113}}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.17in}}}{\end{list}}
-\newenvironment{list2}{
-  \begin{list}{$\bullet$}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemi}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.9835\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingi}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.9835\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-    
 \begin{document}
 
-\name{\LARGE Aviral Gupta} \hfill {\em \today}
-
-\begin{resume}
-\section{\sc Contact Information}
-
-\vspace{.025in}
-E130, 2nd Floor \hfill {Phone: } (+91) 8287534185 \\
-Ashok Vihar, Phase-1 \hfill {Email: } \href{mailto:aviral.gupta@columbia.edu}{aviral.gupta@columbia.edu}\\
-New Delhi, India - 110052 \hfill {LinkedIn: }{\href{https://www.linkedin.com/in/aviral13/}{aviral13}}\\
-\null \hfill {GitHub: }{\href{https://github.com/avi1310}{avi1310}}
-    
-%\begin{document}
-
 %----------HEADING-----------------
-%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
- % \textbf{\href{https://www.linkedin.com/in/aviral13/}{\Large Aviral Gupta}} & Email : \href{mailto:aviral.gupta@columbia.edu}{aviral.gupta@columbia.edu}\\
-  %GitHub: {\href{https://github.com/avi1310}{avi1310}} & Mobile : (+91) 8287534185 \\
-%\end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/aviral13/}{\huge Aviral Gupta}} & (929) 318-4813\\
+  71 W 107TH ST, Apt 5E & \href{mailto:ag4015@columbia.edu}{ag4015@columbia.edu}\\
+  New York, NY 10025 & Github: {\href{https://github.com/avi1310}{avi1310}}
+\end{tabular*}
 
-%\begin{resume}
+\justifying
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Columbia University}{New York, NY}
+      {Master of Science in Computer Science}{Sep 2018 -- Dec 2019}
+      \resumeItemListStart
+        \resumeItem{Courses}
+          {Software Engineering, Cloud Computing, Analysis of Algorithms, Security}
+        \resumeItem{Course Assistant}
+          {Programming Languages (JavaScript), Fall 2018}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Guru Gobind Singh Indraprastha University}{New Delhi, IN}
+      {Bachelor of Technology in Information Technology;  GPA: 3.8/4.0; Institute Rank: 1}{Aug 2013 -- May 2017}
+  \resumeSubHeadingListEnd
 
-%\section{\sc Interests}
-%Deep Learning, Applied Machine Learning, Statistical Data Analysis
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \itemsep0em
+    \item{
+      \textbf{Languages}{: JavaScript (ES5 \& ES6), Python, HTML, CSS, C/C++, Java}
+    }
+    \item{
+      \textbf{Web/Frameworks/Others}{: React.js, React Native, AWS, Bootstrap, SQL, jQuery, Django, Node.js}
+      }
+    \vspace{-3pt}
+  \resumeSubHeadingListEnd
 
-\section{\sc Education}
-{\bf Columbia University, New York, NY} \hfill {\bf Aug'18 - Dec'19}\\
-Master of Science, Computer Science (Software Systems) %\hfill(Percentage: {\bf 93.8\%})\\
 
-%{\bf Secondary School}: Bal Bharati Public School, Pitampura, Delhi\hfill March 2000 -- April 2012\\
-%CBSE \hfill(GPA: {\bf 8.8/10})
+%-----------EXPERIENCE------------- ---
+\section{Experience}
+  \resumeSubHeadingListStart
+    \itemsep0.35em
+    \resumeSubheading
+      {All India Council for Technical Education (AICTE), Govt. of India}{New Delhi, IN} 
+      {Research and Development Intern}{Oct 2017 - Mar 2018}
+      \resumeItemListStart
+        \resumeItemi{}
+          {Implemented the winning project at Smart India Hackathon 2017, {\it Prediction of Admission \& Jobs in Engineering \& Technology/Management/Pharmacy} under \href{https://www.aicte-india.org/leadership/dr-nh-siddalingaswamy}{\it Dr. N.H. Siddalingaswamy (Director, AICTE)}}
+        \resumeItemi{}
+          {Analyzed Indian institutes' datasets and employment statistics using Python to find correlation between them}
+        \resumeItemi{}
+          {Researched and compared different accredition mechanisms with the pre-exisiting AICTE approval handbook}
+        \resumeItemi{}
+          {Developed dynamic web-based analytical dashboards using Bootstrap, plot.ly and Django to aid AICTE in granting course approvals to higher educational institutions and prediction of jobs}
+      \resumeItemListEnd
 
-{\bf Guru Gobind Singh Indraprastha University, New Delhi, India} \hfill {\bf Aug'13 - May'17}\\
-Bachelor of Technology in Information Technology \hfill {\bf GPA (WES): 3.8/4.0}\\
-{\bf Institute Rank: }1, {\bf University Rank: }5\\
-{\bf Courses:} Web Engineering; Software Engineering; Algorithms and Design Analysis; OOPs; Database Management Systems; Operating System 
+    \resumeSubheading
+      {Snapdeal}{Gurgaon, IN}
+      {Software Engineering Intern}{Jun 2016 - Aug 2016}
+      \resumeItemListStart
+        \resumeItemi{}
+          {Achieved 7\% improvement (100ms) in Time To First Byte of e-commerce website's page load performance by minimizing HTTP requests, optimizing delivery of static resources and early flushing of data}
+        \resumeItemi{}
+          {Integrated Olark Chat, a third-party chat application, for first time users along with activity tracking to report on all the user's properties across the website user flow using JS and AJAX}
+        \resumeItemi{}
+          {Researched and presented the idea for {\it Lite Website} with effective user bandwidth detection}
+        \resumeItemi{}
+          {Wrote Python scripts to organize resources and optimize build times}
+      \resumeItemListEnd
 
-\section{\sc Experience}
-{\bf Intern, All India Council for Technical Education,}\hfill {\bf Oct'17 - Mar'18}\\  
-{\bf Ministry of H.R.D., Govt. of India} \hfill {\bf Mentor}: {\href{https://www.aicte-india.org/leadership/dr-nh-siddalingaswamy}{\it Dr. N.H. Siddalingaswamy}}
+  \resumeSubHeadingListEnd
 
-\begin{list2}
-  %\setlength\itemsep{0em}
-  \item Implemented the winning project at Smart India Hackathon 2017, {\it Prediction of Admission \& Jobs in Engineering \& Technology/Management/Pharmacy}
-  \item The aim of the project was to build a decision support system to help quantify the employment
-potential of an institute/course under assessment and thus augment AICTE’s handbook approval system for technical institutions in India
-\end{list2}
-{\bf Web Development Intern, Snapdeal, Gurgaon, India}\hfill {\bf Jun'16 - Aug'16}
 
-\begin{list2}
-  %\setlength\itemsep{0em}
-  \item Optimized the e-commerce website's page load performance with an improvement in TTFB (Time to First Byte) by 7\% (100ms) 
-  \item Integrated Olark Chat, a third-party chat application, for first time users along with report of their journey on the website using JS and AJAX
-  \item Researched and presented the idea for {\it Lite Website} with effective user bandwidth detection 
-  \item Wrote Python scripts to organize resources and optimize build times
-\end{list2}
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \itemsep0.35em
+    \resumeSubheadingi
+        {Mobile Flashcards: An iOS Quiz Application using React Native}{Dec 2017 - Jan 2018}
+        \resumeItemListStart
+          \resumeItemi{}
+            {This app allows users to study and create a collection of different categories of flashcards called “decks”, add flashcards, and then take quizzes on those decks}
+          \resumeItemi{}
+            {Leveraged React Native to manage infinite lists, routing and user input}
+        \resumeItemListEnd
+    \resumeSubheadingi
+        {Readable: A Web Application using React JS and Redux}{Nov 2017 - Dec 2017}
+        \resumeItemListStart
+          \resumeItemi{}
+            {Built a social content and discussion web application that allows users to submit content, vote and comment}
+          \resumeItemi{}
+            {Leveraged React to build a dynamic user interface, as well as Redux to manage global application state}
+        \resumeItemListEnd
+    \resumeSubheadingi
+        {Machine Learning Prediction Engine API}{Feb 2017 - Apr 2017}
+        \resumeItemListStart
+          \resumeItemi{}
+            {An interactive web application was built on top of a Django based RESTFUL API which can get remote predictions from a machine learning model integrated at the backend}
+        \resumeItemListEnd
+    \resumeSubheadingi
+        {Freeword: A Web Application using Django, JS and Bootstrap}{Oct 2016 - Jan 2017}
+        \resumeItemListStart
+          \resumeItemi{}
+            {Built a question-answer web application similar to Quora as a platform where users could express their opinions freely and anonymously}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-%\section{\sc Publications}
-%{\bf Wadhwa S}, Gupta A, Dokania S, Kanji R, Bagler G (2018) A hierarchical anatomical classification schema for prediction of phenotypic side effects. PLOS ONE 13(3): e0193959. 
-%\\{\href{https://doi.org/10.1371/journal.pone.0193959}{\color{blue}https://doi.org/10.1371/journal.pone.0193959}}
+%
 
-\section{\sc Projects}
-{\bf Mobile Flashcards: An iOS Quiz Application using React Native}\hfill {\bf Dec'17}\\
-This app allows users to study and create a collection of different categories of flashcards called “decks”, add
-flashcards, and then take quizzes on those decks\\ 
-{\bf Readable: A Web Application using React JS and Redux}\hfill {\bf Nov'17}\\
-Built a social content and discussion web application that allows users to submit content in addition to voting
-and commenting\\
-{\bf Freeword: A Web Application using Django, JS and Bootstrap}\hfill {\bf Oct'16}\\
-Built a question-answer web application similar to Quora as a platform where users could express their opinions freely and anonymously \\
-{\bf JavaScript Based Web Browser Games} \hfill {\bf Dec'15}\\
-Developed {\it Space Invaders} and {\it 2048} games using JavaScript 
+  %-----------AWARDS AND HONORS -----------------
+\section{Awards/Honors}
+  \resumeSubHeadingListStart
+    \itemsep0em
+    \item{
+      \textbf{Winner, Smart India Hackathon 2017,}{ where over 7200+ teams pan India competed in a 36-hour Hackathon organized by the Govt. of India}
+    }
+    \item{
+      \textbf{Honorable Mention at ACM-ICPC}{ (Association for Computing Machinery – International Collegiate Programming Contest) National Regionals 2015, Kolkata after qualifying amongst the top 60 institutes of India}
+    }
+  \resumeSubHeadingListEnd
 
-\section{\sc Other Courses}
-{\bf React Nanodegree Program,} Udacity \hfill {\bf Jul'17 - Dec'17} \\
-{\bf Web Dev. Course (Elixir),} Coding Blocks, New Delhi \hfill {\bf Aug'15 - Dec'15} \\
-{\bf Microsoft’s Online Certi. Course,} {\it DEV203x: Intro. to Bootstrap}, edX \hfill {\bf Jun'15}
 
-\section{\sc Technical Skills}
-{\bf Web Development}: JS, React.js, React Native, Django, Node.js, jQuery, AJAX, Bootsrap, CSS\\
-{\bf Programming Languages/Others}: Python, C/C++, C\#, JAVA, GIT, SQL
-
-\section{\sc Achievements}
-{\bf Winner, Smart India Hackathon 2017,} where over 7200+ teams pan India competed in a 36-hour Hackathon organized by the Govt. of India \hfill {\bf Apr'17} \\
-{\bf Honorable Mention at ACM-ICPC} (Association for Computing Machinery – International Collegiate
-Programming Contest) National Regionals, Kolkata after qualifying amongst the top 60 institutes of India \hfill {\bf Dec'15}
-
-\end{resume}
+%-------------------------------------------
 \end{document}
